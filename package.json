@@ -1,0 +1,27 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "React ",
+  "keywords": [
+    "React",
+    "🔥"
+  ],
+  "homepage": "https://github.com/ANURAGYADAV008/React001#readme",
+  "bugs": {
+    "url": "https://github.com/ANURAGYADAV008/React001/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANURAGYADAV008/React001.git"
+  },
+  "license": "ISC",
+  "author": "Anurag yadav",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}

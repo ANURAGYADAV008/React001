@@ -11,6 +11,4 @@ const heading = React.createElement("h1", { id: "heading" }, "Hello World! From 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const container = React.createElement("div", {}, [heading, parent]);
 console.log(container)
-//React.createelement->its create object 
-
 root.render(container);
