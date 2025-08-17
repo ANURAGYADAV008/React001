@@ -1,10 +1,9 @@
 {
   "name": "reactjs",
   "version": "1.0.0",
-  "description": "React ",
+  "description": "This is React bY anurag yadav",
   "keywords": [
-    "React",
-    "🔥"
+    "React"
   ],
   "homepage": "https://github.com/ANURAGYADAV008/React001#readme",
   "bugs": {
@@ -17,11 +16,14 @@
   "license": "ISC",
   "author": "Anurag yadav",
   "type": "commonjs",
-  "main": "App.js",
   "scripts": {
     "test": "jest"
   },
   "devDependencies": {
     "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   }
 }

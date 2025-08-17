@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 const parent = React.createElement("div",
   { id: "parent" },
   React.createElement("div", { id: "child" }, [
@@ -12,5 +12,4 @@ const heading = React.createElement("h1", { id: "heading" }, "Hello World! From 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const container = React.createElement("div", {}, [heading, parent]);
-console.log(container)
 root.render(container);
