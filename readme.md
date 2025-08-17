@@ -1,6 +1,6 @@
 # React 🔥
 
-# Parcel
+## Parcel
 
 - Dev Builder
 - local server
@@ -9,3 +9,7 @@
 - Minification
 - Bundling
 - Compress
+- Error Handling
+- HTTPs
+- Image Optimising
+- Lazy Mode
