@@ -17,19 +17,21 @@
   "author": "Anurag yadav",
   "type": "commonjs",
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {
     "parcel": "^2.15.4"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "lucide-react": "^0.540.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.12"
   },
-  "browserlist":[
-  "last 2 versions"
-]
-
+  "browserlist": [
+    "last 2 versions"
+  ]
 }
