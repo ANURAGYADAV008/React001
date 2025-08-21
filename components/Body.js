@@ -6,7 +6,7 @@ import SearchBtn from "./searchbtn";
 const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
   const Filter=()=>{
-    const FilteredRes=restaurants.filter((res)=>res.info.avgRating>4);
+    const FilteredRes=restaurants.filter((res)=>res.info.avgRating>4.5);
     setRestaurants(FilteredRes);
   }
 
@@ -40,7 +40,14 @@ const Body = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       
       {restaurants.length === 0 ? (
-        <p>Loading...</p>
+        
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-blue-100">
+            <div ></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
       ) : (
         restaurants.map((rest) => (
           <FoodCard
