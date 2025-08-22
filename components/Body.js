@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import FoodCard from "./Foodcard";
 import SearchBtn from "./searchbtn";
+import Shimmer from "./Shimmer.js";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]); // original full list
@@ -35,7 +36,7 @@ const Body = () => {
       } catch (error) {
         console.log(error);
       }
-    };
+    }
 
   return (
     <div>
@@ -54,9 +55,7 @@ const Body = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
         {restaurants.length === 0 ? (
-          <div className="col-span-4 text-center text-gray-500 text-5xl">
-            Loading
-          </div>
+           <Shimmer/>
         ) : (
           restaurants.map((rest) => (
             <FoodCard
@@ -78,3 +77,5 @@ const Body = () => {
 };
 
 export default Body;
+
+
