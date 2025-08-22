@@ -14,3 +14,12 @@
 - Image Optimising
 - Lazy Mode
 - Different dev and prod bundles
+
+## React Hook
+
+- Normal Js Utility function
+- Normal Js function
+- Two important hook
+- useState()-superPowerful variable
+- useEffect()
+
