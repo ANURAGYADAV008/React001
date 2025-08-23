@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const SearchBtn = ({ restaurants, setRestaurants }) => {
   const [text, setText] = useState(""); // start with empty string
+  console.log("Rerender")
 
   const SearchFood = () => {
     const SearchItem = restaurants.filter((item) =>
