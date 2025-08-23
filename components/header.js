@@ -1,4 +1,5 @@
 import { ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className=" sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-white shadow-md">
@@ -12,9 +13,15 @@ const Header = () => {
       </div>
       <nav>
         <ul className="flex gap-8 text-lg font-medium text-gray-700 mx-10">
-          <li className="hover:text-amber-500 cursor-pointer">Home</li>
-          <li className="hover:text-amber-500 cursor-pointer">About Us</li>
-          <li className="hover:text-amber-500 cursor-pointer">Contact Us</li>
+          <li className="hover:text-amber-500 cursor-pointer">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="hover:text-amber-500 cursor-pointer">
+            <Link to="/about">About Us</Link>
+          </li>
+          <li className="hover:text-amber-500 cursor-pointer">
+            <Link to="/contactus">Contact Us</Link>
+          </li>
           <li className="hover:text-amber-500 cursor-pointer">Menu</li>
           <li className="hover:text-amber-500 cursor-pointer">
             <ShoppingCart size={32} />
