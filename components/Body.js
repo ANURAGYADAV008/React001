@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import FoodCard from "./Foodcard";
 import SearchBtn from "./searchbtn";
 import Shimmer from "./Shimmer.js";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]); // original full list
@@ -58,8 +59,9 @@ const Body = () => {
            <Shimmer/>
         ) : (
           restaurants.map((rest) => (
+            <Link to={"/restaurants/"+rest.info.id}  key={rest.info.id} >
+              
             <FoodCard
-              key={rest.info.id}
               name={rest.info.name}
               price={rest.info.costForTwo}
               time={rest.info.sla?.deliveryTime + " mins"}
@@ -69,6 +71,7 @@ const Body = () => {
                 rest.info.cloudinaryImageId
               }
             />
+            </Link>
           ))
         )}
       </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const FoodCard = ({ id, name, price, image, time, avgRating }) => {
+const FoodCard = ({ name, price, image, time, avgRating }) => {
   return (
     <div className="w-[280px] bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-all my-6 cursor-pointer">
         <img

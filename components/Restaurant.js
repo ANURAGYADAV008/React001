@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import MenuHeader from "./Menu/MenuHeader";
 
 const RestaurantMenu = () => {
-  const { id } = useParams(); // 👈 read restaurantId from URL
+  const {id} = useParams(); // 👈 read restaurantId from URL
   const [menuItem, setMenuItem] = useState([]);
 
   const fetchRestaurantMenu = async () => {
     try {
       const res = await fetch(
-        `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.470502&lng=77.4822579&restaurantId=61111&catalog_qa=undefined&submitAction=ENTER`
+        `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.470502&lng=77.4822579&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`
       );
       const data = await res.json();
       console.log(data);
@@ -24,7 +24,7 @@ const RestaurantMenu = () => {
 
   useEffect(() => {
     fetchRestaurantMenu();
-  }, [id]);
+  }, []);
   
   return (
     <div>
