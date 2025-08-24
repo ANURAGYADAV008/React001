@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
 import FoodCard from "./Foodcard";
 import SearchBtn from "./searchbtn";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import useRestaurant from "../utils/useRestaurent.js";
+
 
 const Body = () => {
-  const [allRestaurants, setAllRestaurants] = useState([]); // original full list
-  const [restaurants, setRestaurants] = useState([]);       // filtered list
+  const {restaurants,setRestaurants,allRestaurants,setAllRestaurants}=useRestaurant();
 
   // Filter by rating
   const Filter = () => {
@@ -15,29 +15,6 @@ const Body = () => {
     );
     setRestaurants(FilteredRes);
   };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-      try {
-        const res = await fetch(
-          "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.470502&lng=77.4822579&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-        );
-        const json = await res.json();
-
-        // Extract restaurant list from API
-        const list =
-          json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-            ?.restaurants || [];
-
-        setAllRestaurants(list); // keep original
-        setRestaurants(list);    // show initially
-      } catch (error) {
-        console.log(error);
-      }
-    }
 
   return (
     <div>
