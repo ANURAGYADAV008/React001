@@ -22,6 +22,9 @@ const Header = () => {
           <li className="hover:text-amber-500 cursor-pointer">
             <Link to="/contactus">Contact Us</Link>
           </li>
+          <li className="hover:text-amber-500 cursor-pointer">
+            <Link to="/grocery">Grocery</Link>
+          </li>
           <li className="hover:text-amber-500 cursor-pointer">Menu</li>
           <li className="hover:text-amber-500 cursor-pointer">
             <ShoppingCart size={32} />

@@ -2,11 +2,14 @@ import FoodCard from "./Foodcard";
 import SearchBtn from "./searchbtn";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 import useRestaurant from "../utils/useRestaurent.js";
+import OfflineScreen from "./offlinescreen.js";
 
 
 const Body = () => {
   const {restaurants,setRestaurants,allRestaurants,setAllRestaurants}=useRestaurant();
+  const status=useOnlineStatus();///hooks return boolean value
 
   // Filter by rating
   const Filter = () => {
@@ -15,8 +18,8 @@ const Body = () => {
     );
     setRestaurants(FilteredRes);
   };
-
-  return (
+  {
+  return status==true?(
     <div>
       <div className="flex">
         <SearchBtn
@@ -53,11 +56,12 @@ const Body = () => {
         )}
       </div>
     </div>
-  );
-};
+  ):(
+    <OfflineScreen/>
+  )
+}
+
+}
 
 export default Body;
-
-
-
 
