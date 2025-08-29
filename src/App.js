@@ -1,6 +1,5 @@
 
 import ReactDOM from "react-dom/client";
-import { ShoppingCart } from "lucide-react";
 import Header from "../components/header.js";
 import Body from "../components/Body.js";
 import ContactUs from "../components/Contact.js";
