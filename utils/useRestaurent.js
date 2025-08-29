@@ -14,7 +14,7 @@ const useRestaurant=()=>{
         const list =
           json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
             ?.restaurants || [];
-
+        console.log(list);
         setAllRestaurants(list); // keep original
         setRestaurants(list);    // show initially
       } catch (error) {
